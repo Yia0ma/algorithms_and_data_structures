@@ -45,3 +45,14 @@
     5. Can you improve the performance of your solution?
     6. Can you think of other ways to refactor?
     7. How have other people solved this problem?
+
+# Some Problem Solving Patterns
+
+    1. Frequency Counter
+    2. Multiple Pointers
+    3. Sliding Window
+    4. Divide and Conquer
+    5. Dynamic Programming
+    6. Greedy Algorithms
+    7. BackTracking
+        ...

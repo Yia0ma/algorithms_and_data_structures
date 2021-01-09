@@ -61,19 +61,6 @@ function validAnagram(str1, str2) {
     array, but it will always be sorted.
 */
 
-/*
-    1. If length of array equal to zero return 0.
-    2. If length of arrat equal to 1 return 1.
-    3. Create 2 pointers to beginning of an array.
-    4. While second pointer is less or equal to last
-    index of an array.
-        4.1. Check if numbers are different in array
-        to which pointers point to.
-        4.2. If numbers are different move first pointer
-        1 index and replace with second pointers value.
-    5. Increase second pointer index by 1.
-*/
-
 function countUniqueValues(arr) {
     if (arr.length === 0) return 0;
     if (arr.length === 1) return 1;
@@ -92,4 +79,112 @@ function countUniqueValues(arr) {
     return pointer1 + 1;
 }
 
-console.log(countUniqueValues([1,1,2,3,3,4]));
+/*
+    Write a function calle sameFrequency. Given two
+    positive integers, find out if the two numbers
+    have the same frequency of digits.
+
+    Restrictions:
+
+        Time: O(n)
+*/
+
+function sameFrequency(num1, num2) {
+    let lookup = {};
+
+    while (num1 % 10 !== 0) {
+        let temp = num1 % 10;
+        lookup[temp] ? lookup[temp] += 1 : lookup[temp] = 1;
+        num1 = Math.floor(num1 / 10);
+    }
+
+    console.log(lookup);
+
+    while (num2 % 10 !== 0) {
+        let temp = num2 % 10;
+        if (!lookup[temp]) {
+            return false;
+        }
+        lookup[temp] -= 1;
+        num2 = Math.floor(num2 / 10);
+    }
+
+    return true;
+}
+
+/*
+    Implement a function called, areThereDuplicates which
+    accepts a variable number of arguments, and checks
+    wheter there are any duplicates among the arguments
+    passed in. 
+
+    Restrictions:
+
+        Time: O(n)
+        Space: O(n)
+*/
+
+function areThereDuplicates(...args) {
+    args.sort((a,b) => a > b);
+    console.log(args);
+    let index1 = 0;
+    let index2 = 1;
+
+    while (index2 < args.length) {
+        if (args[index1] === args[index2])
+            return true;
+        index1++;
+        index2++;
+    }
+    return false;
+}
+
+/*
+    Write a function calle averagePair. Given a sorted
+    array of integers and a target average, determine
+    if there is a pair of values in the array where the
+    average of the pair equals the target average.
+
+
+*/
+
+function averagePair(arr, avg) {
+    let i = 0;
+    let j = arr.length - 1;
+
+    while (i < j) {
+        let temp = (arr[i] + arr[j]) / 2;
+        if (temp === avg) {
+            console.log(arr[i], arr[j]);
+            return true;
+        }
+        if (temp > avg)
+            j--;
+        else
+            i++;
+    }
+    return false;
+}
+
+/*
+    Write a functions called isSubsequence which takes
+    in two strings and checks whether the characters in
+    the first string form a subsequence of the characters
+    in the second string.
+
+    Restrictions:
+
+        Time: O(n + m) or Space: O(1)
+*/
+
+function isSubsequence(str1, str2) {
+    let i = 0;
+    let j = 0;
+
+    while (j < str2.length) {
+        if (str1[i] === str2[j]) i++;
+        if (i === str1.length) return true;
+        j++;
+    }
+    return false;
+}

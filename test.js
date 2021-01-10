@@ -1,5 +1,5 @@
 // Test all challenges here.
 
-const {factorial} = require("./challenges/factorial");
+const {productOfArray} = require("./challenges/productOfArray");
 
-console.log(factorial(5));
+console.log(productOfArray([1,2,3,10]));

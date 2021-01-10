@@ -1,5 +1,5 @@
 // Test all challenges here.
 
-const {productOfArray} = require("./challenges/productOfArray");
+const {recursiveRange} = require("./challenges/recursiveRange");
 
-console.log(productOfArray([1,2,3,10]));
+console.log(recursiveRange(10));

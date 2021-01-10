@@ -4,7 +4,7 @@
  * sequence.
  */
 
- exports.fib = (num) => {
+exports.fib = (num) => {
      if (num <= 2) return 1;
      return this.fib(num-1) + this.fib(num-2);
- };
+};

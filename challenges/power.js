@@ -4,7 +4,7 @@
  * the base to the exponent.
  */
 
- module.exports.power = (base, exponent) => {
+ exports.power = (base, exponent) => {
      if (exponent === 0) return 1;
      return base * this.power(base, exponent - 1);
  };

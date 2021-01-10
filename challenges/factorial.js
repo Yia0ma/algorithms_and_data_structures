@@ -3,7 +3,7 @@
  * and returns the factorial of that number.
  */
 
- module.exports.factorial = (number) => {
-     if (number === 1 || num === 0) return 1;
-     return number * this.factorial(number - 1);
+ module.exports.factorial = (num) => {
+     if (num === 1 || num === 0) return 1;
+     return num * this.factorial(num - 1);
  }

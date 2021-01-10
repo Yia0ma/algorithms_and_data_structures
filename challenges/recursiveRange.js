@@ -6,6 +6,5 @@
 
  exports.recursiveRange = (num) => {
      if (num === 0) return num;
-     if (num === 1) return 1;
      return num + this.recursiveRange(num - 1);
  };

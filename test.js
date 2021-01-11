@@ -1,7 +1,4 @@
 // Test all challenges here.
+const {linearSearch} = require("./search_algorithms/linearSearch");
 
-const {recursiveRange} = require("./challenges/recursiveRange");
-const {fib} = require("./challenges/fib");
-const {reverse} = require("./challenges/reverse");
-
-console.log(reverse("abc"));
+console.log(linearSearch([1,2,3], 3));

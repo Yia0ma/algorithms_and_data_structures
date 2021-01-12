@@ -1,6 +1,9 @@
 // Test all challenges here.
 
-const {naiveStringSearch} = require("./search_algorithms/naiveStringSearch");
+const {bubbleSort} = require("./sort_algorithms/bubbleSort");
 
-console.log("abc" < "cba");
+const arr = [10, 5, 3, 8, 1];
 
+bubbleSort(arr);
+
+console.log(arr);
